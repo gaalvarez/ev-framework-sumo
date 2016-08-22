@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+ 
+    <input>
+      <net-file value="CalleCali.net.xml"/>
+      <route-files value="rutaCalleCali.rou.xml"/>
+    <additional-files value="map.poly.xml"/> -->
+      <junction-files value=""/>
+    </input>
+	
+		
+    <output>
+      <netstate-dump value=""/>	   
+	   <battery-output value="output-bateria.xml"/>
+	   <battery-output.precision value="4"/>
+       <device.battery.probability value="1"/>
+       <summary-output value="output-summary_100.xml"/>
+
+    </output>
+	
+    <time>
+      <begin value="0"/>
+      <end value="2000"/>
+      <time-to-teleport value="-1"/>
+      <srand value="23423"/>
+      <route-steps value="-1"/>
+    </time>
+
+    <reports>
+       <print-options value="true"/>
+    </reports>
+
+</configuration>
+
+
+
+ 
+   

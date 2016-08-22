@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Wed Aug 10 15:12:21 2016 by SUMO duarouter Version 0.27.1
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/gaalvarez/Documentos/SimulatorFramework/EV/CalleCali.net.xml"/>
+        <flow-files value="/home/gaalvarez/Documentos/SimulatorFramework/EV/rutas.flow.xml"/>
+    </input>
+
+    <output>
+        <output-file value="ruta.rou.xml"/>
+    </output>
+
+    <processing>
+        <ignore-errors value="true"/>
+    </processing>
+
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+    </time>
+
+    <report>
+        <verbose value="true"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="primera.0" type="vehiculo1" depart="0.00">
+        <routeDistribution last="0">
+            <route cost="166.14" probability="1.00000000" edges="268505088#0 268505088#1 268505088#2 268505088#3 268505088#4 268505088#5 268505088#6 268505088#7 268505088#8 268505088#9 268505088#10 268505088#11 268505088#12 268505088#13 268505088#14 268505098 28204565#0 28204565#1 28204565#2 28204565#3 28204565#4 28204565#5 28204565#6 28204565#7"/>
+        </routeDistribution>
+    </vehicle>
+</routes>

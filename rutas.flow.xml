@@ -1,0 +1,4 @@
+<flows>
+<vtype id="vehiculo1" accel="0.8" decel="4.5" sigma="0.5" maxspeed="8.5"/>
+<flow id="primera" from="268505088#0" to="28204565#7" begin="0" end="600" vehsPerHour="1" type="vehiculo1"/>
+</flows>

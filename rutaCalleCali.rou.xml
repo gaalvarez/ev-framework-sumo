@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+
+<routes>
+<!--
+ruta1 sur norte de Cali
+MMTcarS-N1= mide 4.5 metros de largo, 1.75 de ancho tipo de conducción timido.
+MMNcarS-N= modelo de movilidad normal
+MMAcarS-N= modelo de movilidad agresivo
+se tomaron evehicle para representarlos como sifueran vehiculos electricos
+-->
+ <!--  rutas sur norte-->
+    <route id="sur-norte1" edges="  268505088#0 268505088#1 268505088#2 268505088#3 268505088#4 268505088#5 268505088#6 268505088#7 268505088#8 268505088#9 268505088#10 268505088#11 268505088#12 268505088#13 268505088#14 268505098 28204565#0 28204565#1 28204565#2 28204565#3 28204565#4 28204565#5 28204565#6 28204565#7 "/>
+
+ <!-- modelos de movilidad-->  
+   <vType id="ModMovTimAut" guiShape ="evehicle" accel="1"   decel="1" sigma="0.6"  minGap="4" maxSpeed="10.07"  length="4.5" width="1.75" >
+	  <param key="maximumBatteryCapacity" value="2000"/>
+	  <param key="vehicleMass" value="2000"/>
+      <param key="frontSurfaceArea" value="7.875"/>
+      <param key="airDragCoefficient" value="0.6"/>
+      <param key="internalMomentOfInertia" value="0.01"/>
+      <param key="radialDragCoefficient" value="0.5"/>
+      <param key="rollDragCoefficient" value="0.01"/>
+      <param key="constantPowerIntake" value="100"/>
+      <param key="propulsionEfficiency" value="0.9"/>
+      <param key="recuperationEfficiency" value="0.9"/> 
+   </vType>
+   
+   
+   <!--estacion de carga-->  
+   <additional>
+     <!-- <busStop id="busstop1" lane="185320228#1" startPos="20" endPos="65" />   --> 
+	  <chargingStation id="estacion2" lane="185320228#1_0" startPos="40" endPos="65" power="20000" efficiency="0.95" chargeInTransit="0" chargeDelay="0" /> 
+      <chargingStation chargeDelay="2" chargeInTransit="0" power="200000" efficiency="0.95" endPos="65" id="estacion1" lane="185320228#1_0" startPos="20"/>
+   </additional>
+   
+   
+  <!-- vehiculos-->  
+      <vehicle id="CarSur-norte" type="ModMovTimAut" color="0,0,1" depart="0" route="sur-norte1" >
+     	 <!--<stop busStop="busstop1" duration="100"/> -->
+		  <!--<stop chargingStation="estacion1" startPos="40" endPos="65" until="90"/> -->
+	      <param key="actualBatteryCapacity" value="1100"/>
+	      <param key="toEVSE" value="false"/>
+	      <param key="ev_target" value="28204565#7"/>
+	      <param key="max_charging_cap" value="0.9"/>
+     </vehicle>
+</routes>
